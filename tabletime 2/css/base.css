@@ -1,0 +1,62 @@
+/* base.css — скидання стилів, типографіка (заголовки, абзаци, посилання, списки) */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #222222;
+  background-color: #F7F8FA;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.75rem; color: #2D6CDF; }
+h3 { font-size: 1.25rem; margin-top: 1.75rem; }
+
+/* Абзаци */
+p {
+  margin: 0 0 1rem;
+}
+
+/* Посилання */
+a {
+  color: #2D6CDF;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #1E4FA3;
+}
+
+/* Списки */
+ul, ol {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+/* Зображення */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,4 @@
+/* style.css — головний файл стилів, підключає решту через @import */
+@import url("base.css");
+@import url("layout.css");
+@import url("components.css");

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TableTime — бронювання столика</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>TableTime</h1>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="burger" aria-label="Меню"><span></span></label>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="catalog.html">Заклади</a></li>
+        <li><a href="restaurant.html">Бронювання</a></li>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Ресторан «Морська хвиля»</h2>
+    <img src="images/restaurant-morska-hvylya-large.jpg" alt="Зал ресторану «Морська хвиля» з панорамними вікнами">
+    <p>Ресторан морської кухні з видом на набережну. Адреса: вул. Набережно-Хрещатицька, 12, Київ.</p>
+
+    <h3>Чому варто прийти</h3>
+    <ul>
+      <li>Свіжі морепродукти щоденної доставки</li>
+      <li>Тераса з видом на воду</li>
+      <li>Дитяче меню</li>
+    </ul>
+
+    <h3>Форма бронювання столика</h3>
+    <form class="booking-form" action="#" method="post">
+      <div class="form-field">
+        <label for="name">Ім'я та прізвище</label>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="60" aria-describedby="name-error">
+        <span class="error-message" id="name-error">Введіть ім'я та прізвище (від 2 до 60 символів).</span>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required aria-describedby="email-error">
+        <span class="error-message" id="email-error">Введіть коректну адресу електронної пошти.</span>
+      </div>
+
+      <div class="form-field">
+        <label for="date">Дата</label>
+        <input type="date" id="date" name="date" required aria-describedby="date-error">
+        <span class="error-message" id="date-error">Оберіть дату бронювання.</span>
+      </div>
+
+      <div class="form-field">
+        <label for="time">Час</label>
+        <input type="time" id="time" name="time" required aria-describedby="time-error">
+        <span class="error-message" id="time-error">Оберіть час бронювання.</span>
+      </div>
+
+      <div class="form-field">
+        <label for="guests">Кількість гостей</label>
+        <select id="guests" name="guests">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+
+      <button type="submit" class="button">Забронювати</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 TableTime</p>
+  </footer>
+
+</body>
+</html>

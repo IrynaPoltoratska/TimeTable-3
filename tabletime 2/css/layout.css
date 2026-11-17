@@ -1,0 +1,80 @@
+/* layout.css — розмітка сторінок (Flexbox, CSS Grid) та медіазапити */
+
+/* Шапка: Flexbox */
+.site-header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem max(1rem, calc((100% - 1100px) / 2 + 1rem));
+  background-color: #2D6CDF;
+  color: #ffffff;
+  border-bottom: 4px solid #F2A93B;
+}
+
+.site-header h1 {
+  margin: 0;
+}
+
+/* Основний вміст */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+}
+
+/* Підвал */
+.site-footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #ffffff;
+  color: #5a5a5a;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Каталог закладів: CSS Grid, 1 колонка на телефоні */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Форма бронювання: CSS Grid, 1 колонка на телефоні */
+.booking-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Планшет */
+@media (min-width: 768px) {
+  .site-header {
+    flex-wrap: nowrap;
+  }
+
+  h2 { font-size: 2rem; }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-form .button {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Настільний комп'ютер */
+@media (min-width: 1024px) {
+  .catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

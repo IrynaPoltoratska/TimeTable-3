@@ -1,0 +1,206 @@
+/* components.css — навігація, бургер-меню, картки, форми, кнопки, таблиці */
+
+/* ---------- Навігація (мобільна версія: бургер-меню) ---------- */
+.nav-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.burger {
+  display: block;
+  padding: 0.75rem 0.5rem;
+  cursor: pointer;
+}
+
+.burger span,
+.burger span::before,
+.burger span::after {
+  display: block;
+  width: 1.5rem;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.burger span {
+  position: relative;
+}
+
+.burger span::before,
+.burger span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.burger span::before { top: -7px; }
+.burger span::after  { top: 7px; }
+
+.main-nav {
+  display: none;
+  flex-basis: 100%;
+}
+
+.nav-toggle:checked ~ .main-nav {
+  display: block;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  margin: 0;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.6rem 0;
+  color: #ffffff;
+  text-decoration: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: #F2A93B;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* Планшет і настільний комп'ютер: звичайне горизонтальне меню */
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
+    flex-basis: auto;
+  }
+
+  .main-nav ul {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .main-nav a {
+    padding: 0.4rem 0;
+    border-top: none;
+  }
+}
+
+/* ---------- Картка закладу ---------- */
+.card {
+  background-color: #ffffff;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card p {
+  margin: 0;
+  padding: 1rem;
+}
+
+/* ---------- Зображення на сторінках ---------- */
+main > img {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Форми ---------- */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+label {
+  font-weight: 500;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  color: #222222;
+  background-color: #ffffff;
+  border: 1px solid #d9dde5;
+  border-radius: 8px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #2D6CDF;
+  outline-offset: 1px;
+  border-color: #2D6CDF;
+}
+
+/* Повідомлення про помилки: приховані, поки поле заповнене коректно */
+.error-message {
+  display: none;
+  font-size: 0.875rem;
+  color: #c62828;
+}
+
+input:user-invalid {
+  border-color: #c62828;
+  background-color: #fdf2f2;
+}
+
+input:user-invalid ~ .error-message {
+  display: block;
+}
+
+/* ---------- Кнопки ---------- */
+.button {
+  padding: 0.75rem 1.5rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #2D6CDF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #1E4FA3;
+}
+
+/* ---------- Таблиці ---------- */
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border: 1px solid #d9dde5;
+  background-color: #ffffff;
+}
+
+th {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #ffffff;
+  background-color: #2D6CDF;
+}
+
+tr:nth-child(even) td {
+  background-color: #F7F8FA;
+}
